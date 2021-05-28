@@ -1,0 +1,851 @@
+@charset "utf-8";
+/*
+Template Name: Besloor
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("fontawesome-free/css/fontawesome-all.min.css");
+@import url("framework.css");
+
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+.row0{padding:80px 0 0 0;}
+.row1, .row1 a{}
+.row2, .row2 a{}
+.row3, .row3 a{}
+.row4, .row4 a{}
+.row5, .row5 a{}
+
+
+/* Top Bar
+--------------------------------------------------------------------------------------------------------------- */
+#topbar{padding:15px 0; font-size:.8rem; text-transform:uppercase;}
+
+#topbar *{margin:0;}
+#topbar ul li{display:inline-block; margin-right:15px;}
+#topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
+#topbar i{line-height:normal;}
+#topbar > div:first-of-type ul li i{margin-right:5px;}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{padding:0 15px; border:solid; border-width:1px 0;}
+
+#header #logo{margin:28px 0 0 0;}
+#header #logo h1{margin:0; padding:0; font-size:22px; line-height:1; text-transform:uppercase;}
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:180px 0;}
+
+#pageintro article{display:block; max-width:60%; margin:0 auto;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem;}
+#pageintro p{max-width:75%; margin:0 auto;}
+#pageintro footer{margin-top:50px;}
+
+
+/* Content Area
+--------------------------------------------------------------------------------------------------------------- */
+.container{padding:80px 0;}
+
+/* Content */
+.container .content{}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle .heading{margin:0; padding:0; line-height:1;}
+
+/* Overview - for services etc. */
+.overview{}
+.overview > li{margin-bottom:50px;}
+.overview > li:nth-last-child(-n+4){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+.overview > li:nth-child(4n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+.overview article{display:block; position:relative; padding:0 0 0 50px;}
+.overview article *{margin:0; padding:0;}
+.overview article i{display:inline-block; position:absolute; top:0; left:0; line-height:1; font-size:36px;}
+.overview article .heading, .overview article p{margin-bottom:20px;}
+
+/* Figures - for image headlines etc. */
+.figures{}
+.figures > li{}
+.figures > li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
+.figures > li > figure{display:inline-block; position:relative; width:100%; max-width:348px;}
+.figures > li > figure img{}
+.figures > li > figure figcaption{}
+.figures > li > figure figcaption time, .figures > li > figure figcaption em{display:block; position:absolute; top:-8px; left:-8px; width:60px; height:auto; padding:8px 0; text-align:center;}
+.figures > li > figure figcaption em{height:60px; line-height:60px; padding:0; font-size:1.6rem; font-style:normal;}
+.figures > li > figure figcaption time *{display:block; margin:0; padding:0;}
+.figures > li > figure figcaption time strong{margin-bottom:-5px;}
+.figures > li > figure figcaption a{display:block; position:relative; width:100%; padding:15px; border:solid; border-width:1px 0 0 1px; text-transform:uppercase;}
+.figures.latest > li > figure figcaption a{min-height:39px; padding:8px 40px 8px 15px; border-width:1px 0 0 0;}
+.figures.latest > li > figure figcaption a::after{position:absolute; top:0; right:0; line-height:38px; height:100%; padding:0 15px; font-family:"Font Awesome\ 5 Free"; font-weight:900; content:"\f105"; border-left:1px solid;}
+
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:80px 0;}
+
+#footer > div:first-of-type .heading{margin-bottom:20px; text-transform:uppercase; font-size:1.8rem;}
+#footer .heading{margin-bottom:50px;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer .contact{}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
+#footer .contact li *{margin:0; padding:0; line-height:1.6;}
+#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+
+#footer input, #footer button{border:1px solid;}
+#footer input{display:block; width:100%; padding:8px;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:400; cursor:pointer;}
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;}
+
+
+
+/* Transition Fade
+This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+Delete it completely to stop fading
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .3s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+
+/* Top Navigation */
+#mainav{}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{position:absolute; width:180px; text-transform:none; z-index:9999;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:none;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+
+
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
+
+
+
+
+/* Font Awesome Social Icons
+--------------------------------------------------------------------------------------------------------------- */
+.faico{margin:0; padding:0; list-style:none;}
+.faico li{display:inline-block; margin:8px 5px 0 0; padding:0; line-height:normal;}
+.faico li:last-child{margin-right:0;}
+.faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
+
+.faico a{color:#C1C2C4; background-color:#292929;}
+.faico a:hover{color:#FFFFFF;}
+
+.faicon-dribble:hover{background-color:#EA4C89;}
+.faicon-facebook:hover{background-color:#3B5998;}
+.faicon-google-plus:hover{background-color:#DB4A39;}
+.faicon-linkedin:hover{background-color:#0E76A8;}
+.faicon-twitter:hover{background-color:#00ACEE;}
+.faicon-vk:hover{background-color:#4E658E;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#C1C2C4; background-color:#292929;}
+a{color:#92B9C8;}
+a:active, a:focus{background:transparent;}
+
+input:focus, textarea:focus, *:required:focus{border-color:#92B9C8;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{background-color:rgba(0,0,0,.55);}
+.overlay.light::after{background-color:rgba(255,255,255,.6);}
+
+
+.btn, .btn.inverse:hover{color:#08435E; background-color:#92B9C8; border-color:#92B9C8; font-family: 'Poppins', sans-serif;
+	font-weight: bold;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+
+.heading.underline::after{background-color:#92B9C8;}
+
+/* Rows */
+.row0, .row0 a{color:#FFFFFF;}
+.row1, .row1 a{}
+.row2{color:#474747; background-color:#F4F4F4;}
+.row3{color:#474747; background-color:#FFFFFF;}
+.row4{color:#C1C2C4; background-color:#1A1914;}
+.row5, .row5 a{color:#C1C2C4; background-color:#292929;}
+
+
+/* Top Bar */
+
+.nav_right .contact_no{color:#92B9C8;}
+
+
+/* Header */
+#header{border-color:rgba(255,255,255,.2);}
+#header #logo h1 a{color:inherit;}
+
+
+/* Page Intro */
+#pageintro{color:#FFFFFF;}
+
+
+/* Content Area */
+.overview a{color:inherit;}
+.overview article:hover a{color:#DC8E47;}
+
+.figures > li > figure figcaption a{border-color:#FFFFFF #92B9C8
+	;}
+.figures > li > figure:hover figcaption a{border-left-color:#92B9C8;}
+.figures.latest > li > figure figcaption a::after{border-color:#92B9C8;}
+.figures.latest > li > figure:hover figcaption a::after{border-color:#92B9C8;}
+.figures > li > figure figcaption a{color:#474747; background-color:rgba(146, 185, 200,.2);}
+.figures > li > figure:hover figcaption a{color:#FFFFFF; background-color:#92B9C8;}
+.figures > li > figure figcaption time, .figures > li > figure figcaption em{color:#FFFFFF; background-color:rgba(146, 185, 200,.5);/* #DC8E47 */}
+
+
+
+/* Footer */
+#footer .heading{color:#FFFFFF;}
+#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
+
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#FFFFFF; background-color:#292929;}
+#footer input:focus{border-color:#92B9C8;}
+#footer button{color:#FFFFFF; background-color:#92B9C8;}
+#footer button:hover{color:inherit; background-color:transparent; border-color:inherit;}
+
+
+/* Navigation */
+#mainav{}
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#92B9C8; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(146, 185, 200,.5);border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:inherit; background-color:#92B9C8; }
+#mainav form select{color:#474747; background-color:#FFFFFF;}
+
+
+#backtotop{color:#FFFFFF; background-color:#92B9C8;}
+
+
+
+
+/* Additional Edits*/
+
+/* Header */
+
+.header_add a {
+	color: #F1F6F8;
+}
+
+.header_add{
+	font-size: 20px;
+	padding-top:2em;
+	font-weight: 800;
+}
+
+.header_slogan{
+	font-size: 20px;
+	font-weight: 900;
+
+}
+
+.header_desc {
+	font-size: 16px;
+	padding-top: 0.8em;
+	line-height: 1.7em;	
+}
+
+
+
+/* Icons Drop Down */
+
+
+/* Account */
+.my_account_dropdown {
+	position: relative;
+	display: block;	
+  }
+
+
+  .my_account_dropdown_content {
+	display: none;
+	position: absolute;
+	background-color:#08435E;
+	opacity: 1;
+	min-width: 110px;
+	z-index: 1;
+  }
+
+  .my_account_items{
+	color: white;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 0;
+	padding-right: 0;
+	margin:0;
+	border:0;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	right:9%;
+  }
+
+.my_account_dropdown_content a:hover {background-color: #92B9C8;}
+.my_account_dropdown:hover .my_account_dropdown_content {display:block;}
+
+
+
+/* Shopping Cart */
+
+
+
+.shopping_dropdown {
+	position: relative;
+	display: block;	
+  }
+
+
+  .shopping_dropdown_content {
+	display: none;
+	position: relative;
+	background-color:#08435E;
+	opacity: 1;
+	min-width: 110px;
+	z-index: 1;
+  }
+
+  .shopping_items{
+	color: white;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 0;
+	padding-right: 0;
+	margin:0;
+	border:0;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	right:25%;
+  }
+
+.shopping_dropdown_content a:hover {background-color: #92B9C8;}
+
+.shopping_dropdown:hover .shopping_dropdown_content {
+	display:block;
+	position:absolute;
+}
+
+
+/*Booking*/
+
+.booking_dropdown {
+	position: relative;
+	display: block;	
+  }
+
+
+  .booking_dropdown_content {
+	display: none;
+	position: relative;
+	background-color:#08435E;
+	opacity: 1;
+	min-width: 110px;
+	z-index: 1;
+  }
+
+  .booking_items{
+	color: white;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 0;
+	padding-right: 0;
+	margin:0;
+	border:0;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	position: relative;
+	right:20%;
+  }
+
+.booking_dropdown_content a:hover {background-color: #92B9C8;}
+
+.booking_dropdown:hover .booking_dropdown_content {
+	display:block;
+	position:absolute;
+}
+
+.dropdown{
+	position: absolute;
+	right: 25%;
+}
+
+
+
+/* Section 1 Font Change */
+
+.one_third .heading{
+	 font-family: 'Chivo', sans-serif;
+	 color: #08435E;
+	 font-size: 28px;
+	text-align: center;}
+
+
+.one_third p {
+font-family: 'Poppins', sans-serif;
+text-align:justify;}
+
+.one_third .membership_footer1 {
+	font-family: 'Poppins', sans-serif;
+	color: #08435E;
+	font-weight: bolder;}
+
+.one_third .membership_footer2 {
+	font-family: 'Poppins', sans-serif;
+	color: #08435E;
+	font-weight: bolder;}	
+
+.one_third .membership_footer3 {
+	font-family: 'Poppins', sans-serif;
+	color: #08435E;
+	font-weight: bolder;}
+
+.membership_desc{
+	font-size: 15px;
+
+}
+	
+/* Re-arrangement of Footer */	
+.membership_footer1{
+		position: absolute;
+		left: 12%;
+	
+	}
+	
+.membership_footer2{
+		position: absolute;
+		left:40%;
+	}
+	
+.membership_footer3{
+		position: absolute;
+		right:22.5%;
+	}
+
+
+
+
+/* Overlay for details on Courses*/
+
+/*Course 1*/
+.course1{
+	position:relative;
+	width:100%;
+}
+
+.course1_image{
+	display: block;
+	width: 100%;
+}
+
+.course1_overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.6);
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition:opacity 0.25s;
+}
+
+.course1_overlay > *{
+	transform:translateY(20px);
+	transition: transform 0.25s;
+}
+
+.course1_overlay:hover{
+opacity:1;
+}
+
+.course1_overlay:hover > *{
+	transform:translateY(0);
+	}
+
+.course1_title{
+	font-size: 2.5em;
+	font-family: 'Roboto', sans-serif;
+	color: #F1F7F8;
+	padding-top: 2em;
+}
+
+.course1_description{
+	font-size: 1.25em;
+	margin-top: 1em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.course_description2{
+	font-size: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	position: relative;
+	bottom: 20px;
+
+}
+
+.course_footer1 {
+	color: #F1F7F8;
+	position: relative;
+	bottom: 30px;
+	
+}	
+
+
+
+/*Course 2*/
+
+.course2{
+	position:relative;
+	width:100%;
+}
+
+.course2_image{
+	display: block;
+	width: 100%;
+}
+
+.course2_overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.6);
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition:opacity 0.25s;
+}
+
+.course2_overlay > *{
+	transform:translateY(20px);
+	transition: transform 0.25s;
+}
+
+.course2_overlay:hover{
+opacity:1;
+}
+
+.course2_overlay:hover > *{
+	transform:translateY(0);
+	}
+
+.course2_title{
+	font-size: 2.5em;
+	font-family: 'Roboto', sans-serif;
+	color: #F1F7F8;
+	padding-top: 2em;
+}
+
+.course2_description{
+	font-size: 1.25em;
+	margin-top: 1em;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding-left: 2em;
+	padding-right: 2em;
+	position: relative;
+}
+
+.one_third .first .course_description2{
+	position: relative;
+	text-align: center;
+}
+
+.course2_description2{
+	font-size: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	position: relative;
+	bottom: 20px;
+}
+
+.course_footer2 {
+	color: #F1F7F8;
+	position: relative;
+	bottom: 30px;
+}
+
+
+
+/*Course 3*/
+
+.course3{
+	position:relative;
+	width:100%;
+}
+
+.course3_image{
+	display: block;
+	width: 100%;
+}
+
+.course3_overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.6);
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition:opacity 0.25s;
+}
+
+.course3_overlay > *{
+	transform:translateY(20px);
+	transition: transform 0.25s;
+}
+
+.course3_overlay:hover{
+opacity:1;
+}
+
+.course3_overlay:hover > *{
+	transform:translateY(0);
+	}
+
+.course3_title{
+	font-size: 2.5em;
+	font-family: 'Roboto', sans-serif;
+	color: #F1F7F8;
+	padding-top: 2em;
+}
+
+.course3_description{
+	font-size: 1.25em;
+	margin-top: 1em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.course3_description2{
+	font-size: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: justify;
+	position: relative;
+	bottom: 20px;
+}
+
+.course_footer3 {
+	color: #F1F7F8;
+	position: relative;
+	bottom: 20px;
+}
+
+
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.facilities{
+	background-color: #07354B;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #07354B;
+  font-size: 36px;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 12px;
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.text1{
+	color: #FFFFFF;
+	font-size: 36px;
+	font-family: 'Roboto', sans-serif;
+	padding: 8px 12px;
+	position: absolute;
+	top:25px;
+	width: 100%;
+	text-align: center;
+
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/*Footer*/
+
+.news_list{
+	color: #92B9C8;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1140px){
+	.hoc{max-width:1140px;}
+}
+
+@media screen and (min-width:978px) and (max-width:1140px){
+	.hoc{max-width:95%;}
+}
